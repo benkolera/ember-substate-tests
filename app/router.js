@@ -6,6 +6,12 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('parent', function() {
+    this.route('sub');
+    this.route('badsub');
+  });
+  this.route('badparent', function() {
+  });
 });
 
 export default Router;
